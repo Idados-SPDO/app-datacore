@@ -1,4 +1,5 @@
 import streamlit as st
+from components.images import render_imgs
 
 def render_report(selected_base):
     """
@@ -173,16 +174,7 @@ def render_report(selected_base):
         """)
         st.markdown("")
         st.html("<h2 id='overview-dados' style='text-align: left; font-size:18px;'>6. Overview dos Dados</h2>")
-        st.markdown("""
-                6.1. **Demonstração dos Dados:**
-        """)
-        #st.image("assets/alagoas/demonstracao.png",use_container_width =True)
-        st.markdown("")
-        st.markdown("""
-                6.2. **Estatísticas Descritivas:**
-        """)
-        #st.image("assets/alagoas/descritiva1.png", use_container_width =True)
-        #st.image("assets/alagoas/descritiva2.png", use_container_width =True)
+        render_imgs(selected_base)
         st.markdown("")
     elif selected_base == "pastorinho":
         st.html("<h2 id='introducao' style='text-align: left; font-size:18px;'>1. Introdução</h2>")
@@ -319,17 +311,7 @@ def render_report(selected_base):
         """)
         st.markdown("")
         st.html("<h2 id='overview-dados' style='text-align: left; font-size:18px;'>6. Overview dos Dados</h2>")
-        st.markdown("""
-                6.1. **Demonstração dos Dados:**
-        """)
-        st.write("Ainda não disponível.")
-        #st.image("assets/pastorinho/demonstracao.png",use_container_width =True)
-        st.markdown("")
-        st.markdown("""
-                6.2. **Estatísticas Descritivas:**
-        """)
-        #st.image("assets/pastorinho/descritiva1.png",use_container_width =True)
-        #st.image("assets/pastorinho/descritiva2.png",use_container_width =True)
+        render_imgs(selected_base)
         st.markdown("")
     elif selected_base == "receita":
         st.html("<h2 id='introducao' style='text-align: left; font-size:18px;'>1. Introdução</h2>")
@@ -636,16 +618,7 @@ WHERE
         """)
         st.markdown("")
         st.html("<h2 id='overview-dados' style='text-align: left; font-size:18px;'>6. Overview dos Dados</h2>")
-        st.markdown("""
-                6.1. **Demonstração dos Dados:**
-        """)
-        #st.image("assets/receita/demonstracao.png",use_container_width =True)
-        st.markdown("")
-        st.markdown("""
-                6.2. **Estatísticas Descritivas:**
-        """)
-        #st.image("assets/receita/descritiva1.png",use_container_width =True)
-        #st.image("assets/receita/descritiva2.png",use_container_width =True)
+        render_imgs(selected_base)
         st.markdown("")
 
 
